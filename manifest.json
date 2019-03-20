@@ -1,0 +1,6 @@
+{
+  "name": "lit-element-starter",
+  "short_name": "lit-element-starter",
+  "start_url": "/",
+  "display": "standalone"
+}
