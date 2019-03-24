@@ -6,7 +6,9 @@ import { LitElement, html, css } from 'lit-element';
 class AppNav extends LitElement {
 
   static get properties() {
-    return {};
+    return {
+      exampleProp: { type: String },
+    };
   }
 
   /* If you're using a styles getter, 'css' must be extended from 'lit-element' */
@@ -17,12 +19,6 @@ class AppNav extends LitElement {
         :host {
           display: block;
         }
-        nav {
-          padding: 16px;
-        }
-        a {
-          margin-right: 24px;
-        }
       `
     ];
   }
@@ -30,11 +26,10 @@ class AppNav extends LitElement {
   render() {
     return html`
       <nav>
-        <div>
-          <a href="/">Home</a>
-          <a href="/another">Another View</a>
-          <a href="/animations">Animations Experiment</a>
-        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/another">Another View</a></li>
+        </ul>
       </nav>
     `;
   }
