@@ -40,6 +40,7 @@ class AppRoot extends LitElement {
       <main class="container">
         <home-view class="page" ?active="${this._page === ''}"></home-view>
         <another-view class="page" ?active="${this._page === 'another'}"></another-view>
+        <animations-view class="page" ?active="${this._page === 'animations'}"></animations-view>
         <app-404-view class="page" ?active="${this._page === '404'}"></app-404-view>
       </main>
       <footer>
@@ -73,6 +74,11 @@ class AppRoot extends LitElement {
         break;
       case 'another':
         import('./views/another-view.js').then((module) => {
+          // Put code in here that you want to run every time this view loads
+        });
+        break;
+      case 'animations':
+        import('./views/animations-view.js').then((module) => {
           // Put code in here that you want to run every time this view loads
         });
         break;
